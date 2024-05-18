@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <link type="image/png" sizes="16x16" rel="icon" href="/icon512.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Number Trainer</title>
+  </head>
+  <body>
+    <main>
+      <div class="question-box">
+        <div>
+          <span class="first-number">4</span>
+          <span class="sign">+</span>
+          <span class="second-number">5</span>
+        </div>
+        <div class="equals">=</div>
+        <div class="equals">?</div>
+      </div>
+      <div class="answer-box">
+        <form class="form">
+          <input class="answer-field" type="number" /><br />
+          <button class="check-button" type="submit">check</button>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js", { scope: "/" });
+      }
+    </script>
+  </body>
+</html>
